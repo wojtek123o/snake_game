@@ -67,7 +67,6 @@ class FRUIT:
         self.y = random.randint(0,cell_number - 1)
         self.pos = Vector2(self.x,self.y)
     
-
 class MAIN:
     def __init__(self):
         self.snake = SNAKE()
@@ -151,15 +150,13 @@ class MAIN:
         screen.blit(gold_apple,apple_rect)
 
             
-
 SCREEN_UPDATE = pygame.USEREVENT
 pygame.time.set_timer(SCREEN_UPDATE,150)
 
 main_game = MAIN()
 
-
+#game loop
 while True:
-
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             pygame.quit()
